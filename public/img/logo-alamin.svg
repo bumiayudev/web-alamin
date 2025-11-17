@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="97.273956mm"
+   height="76.931503mm"
+   viewBox="0 0 97.273956 76.931503"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-55.479447,-86.547945)">
+    <path
+       style="fill:#008000;stroke-width:0.264583"
+       d="M 86.178081,144.61644 137.9589,142.76712"
+       id="path6" />
+    <path
+       style="fill:#999999;stroke-width:0.30392"
+       d="m 77.726696,152.0137 -0.425324,-33.52602 c 6.244021,-10.63948 15.07788,-14.39764 26.208808,-18.994527 15.01843,5.172407 19.03378,10.559927 24.83034,16.872617 l 0.267,34.7629 c -16.60561,-17.39603 -31.279896,-16.2156 -50.880824,0.88503 z"
+       id="path11" />
+    <path
+       style="fill:#999999;stroke-width:0.273762"
+       d="m 55.849316,152.38354 0.384656,-38.83561 95.395068,0.38074 0.38467,37.69339 -23.46411,0.38074 -0.76933,-18.65633 H 77.774794 v 18.65633 z"
+       id="path14" />
+    <rect
+       style="fill:#999999;stroke-width:0.372676"
+       id="rect15"
+       width="97.273949"
+       height="5.9178081"
+       x="55.479446"
+       y="157.56163" />
+    <g
+       id="g15"
+       transform="translate(18.863014,4.8082192)">
+      <rect
+         style="fill:#999999;stroke-width:0.137244"
+         id="rect14"
+         width="57.353176"
+         height="16.045223"
+         x="89.387939"
+         y="41.412788"
+         transform="matrix(-0.01146054,0.99993433,0.99999732,0.00231535,0,0)" />
+      <ellipse
+         style="fill:#999999;stroke-width:0.136127"
+         id="path15"
+         cx="48.452053"
+         cy="88.02739"
+         rx="6.6575341"
+         ry="6.2876706" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000080;stroke-width:0.264583"
+       x="85.068489"
+       y="154.97258"
+       id="text15"><tspan
+         id="tspan15"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:Monospace;-inkscape-font-specification:'Monospace Bold';fill:#333333;stroke-width:0.264583"
+         x="85.068489"
+         y="154.97258">AL-AMIN</tspan></text>
+    <g
+       id="g16"
+       transform="translate(92.835617,4.8082192)">
+      <rect
+         style="fill:#999999;stroke-width:0.137244"
+         id="rect16"
+         width="57.353176"
+         height="16.045223"
+         x="89.387939"
+         y="41.412788"
+         transform="matrix(-0.01146054,0.99993433,0.99999732,0.00231535,0,0)" />
+      <ellipse
+         style="fill:#999999;stroke-width:0.136127"
+         id="ellipse16"
+         cx="48.452053"
+         cy="88.02739"
+         rx="6.6575341"
+         ry="6.2876706" />
+    </g>
+  </g>
+</svg>

@@ -13,7 +13,7 @@
                 <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
                     <div class="flex items-center justify-between">
                         <a href="/">
-                            <img class="w-auto h-28 sm:h-28" src="{{ asset('images/ALAMIN.png') }}" alt="">
+                            <img class="w-auto h-16 sm:h-24" src="{{ asset('images/logo-alamin.svg') }}" alt="logo-alamin">
                         </a>
 
                         <!-- Mobile menu button -->
@@ -52,7 +52,7 @@
                     <div class="w-full -mx-6 lg:w-2/5">
                         <div class="px-6">
                             <a href="/">
-                                <img class="w-auto h-28 sm:h-28" src="{{ asset('images/ALAMIN.png') }}" alt="">
+                                <img class="w-auto h-16 sm:h-24" src="{{ asset('images/logo-alamin.svg') }}" alt="logo-alamin">
                             </a>
 
                             <p class="max-w-sm mt-2 text-gray-500 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
