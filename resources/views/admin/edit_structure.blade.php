@@ -2,7 +2,7 @@
 @section('content')
 
  <!-- Page Heading -->
-<h1 class="h3 mb-1 text-gray-800">Activities/edit</h1>
+<h1 class="h3 mb-1 text-gray-800">Structures/edit</h1>
 <p class="mb-4">Edit data</p>
 
 <!-- Content Row -->
@@ -21,19 +21,19 @@
                 <h6 class="m-0 font-weight-bold text-primary">Edit data</h6>
             </div>
             <div class="card-body">
-                <form action="{{ route('activities.update', $row->id) }}" method="POST">
+                <form action="{{ route('structures.update', $row->id) }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="name" class="form-label">Activity Name</label>
+                        <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" name="name" value="{{ $row->name }}">
                         @error('name')
                         <span class="text-danger mt-2">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="content" class="form-label">Content</label>
-                        <textarea class="form-control" name="content">{{ $row->content }}</textarea>
-                        @error('content')
+                        <label for="position" class="form-label">Position</label>
+                        <input type="text" class="form-control" name="position" value="{{ $row->position }}">
+                        @error('position')
                         <span class="text-danger mt-2">{{ $message }}</span>
                         @enderror
                     </div>
@@ -53,7 +53,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Upload File(jpg,jpeg,png)</h6>
             </div>
             <div class="card-body">
-                <form action="{{ route('activities.update_file', $row->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('structures.update_file', $row->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="image" class="form-label">Image</label>

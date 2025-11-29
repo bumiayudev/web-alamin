@@ -62,7 +62,7 @@
                 <a class="nav-link" href="/activities/list">
                     <span>Activities</span>
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/structures/list">
                     <span>Organization</span>
                 </a>
             </li>

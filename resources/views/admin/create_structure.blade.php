@@ -2,8 +2,8 @@
 @section('content')
 
  <!-- Page Heading -->
-<h1 class="h3 mb-1 text-gray-800">Activities/create</h1>
-<p class="mb-4">Buat data baru, lengkapi isian dengan benar.</p>
+<h1 class="h3 mb-1 text-gray-800">Structures/create</h1>
+<p class="mb-4">Buat data baru lengkapi isian dengan benar.</p>
 
 <!-- Content Row -->
 <div class="row">
@@ -21,19 +21,19 @@
                 <h6 class="m-0 font-weight-bold text-primary">Create a new data</h6>
             </div>
             <div class="card-body">
-                <form action="{{ route('activities.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('structures.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="name" class="form-label">Activity Name</label>
+                        <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" name="name">
                         @error('name')
                         <span class="text-danger mt-2">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="content" class="form-label">Content</label>
-                        <textarea class="form-control" name="content"></textarea>
-                        @error('content')
+                        <label for="position" class="form-label">Position</label>
+                        <input class="form-control" name="position">
+                        @error('position')
                         <span class="text-danger mt-2">{{ $message }}</span>
                         @enderror
                     </div>

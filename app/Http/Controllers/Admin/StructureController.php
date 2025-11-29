@@ -3,19 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\Activity;
+use App\Models\Structure;
 
-class ActivityController extends Controller
+class StructureController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $rows = Activity::paginate();
-        return view('admin.list_activity', ['rows' => $rows]);
+        $rows = Structure::paginate();
+        return view('admin.list_structure', ['rows' => $rows]);
     }
 
     /**
@@ -23,34 +22,32 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('admin.create_activity');
+        return view('admin.create_structure');
     }
 
     /**
      * Store a newly created resource in storage.
-    */
+     */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+         $validated = $request->validate([
             'name' => 'required|max:255',
-            'content' => 'required',
+            'position' => 'required',
             'image' => 'image|mimes:jpeg,jpg,png',
         ]);
 
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . $request->file('image')->extension();
-            $request->file('image')->storeAs('uploads/activities', $imageName); // Simpan di storage/app/public/uploads/activities
-            $imagePath = 'uploads/activities/' . $imageName; // Path yang disimpan di database
+            $request->file('image')->storeAs('uploads/structures', $imageName); // Simpan di storage/app/public/uploads/activities
+            $imagePath = 'uploads/structures/' . $imageName; // Path yang disimpan di database
         }
 
-        $row = new Activity;
+        $row = new Structure;
         $row->name = $validated['name'];
-        $row->content = $validated['content'];
+        $row->position = $validated['position'];
         $row->image = $imagePath;
-        $row->uploaded_by = Auth::user()->name;
         $row->save();
         return back()->with('success', 'Data has been saved');
-
     }
 
     /**
@@ -58,24 +55,23 @@ class ActivityController extends Controller
      */
     public function edit(string $id)
     {
-        $row = Activity::find($id);
-        return view('admin.edit_activity', ['row' => $row]);
+        $row = Structure::find($id);
+        return view('admin.edit_structure', ['row' => $row]);
     }
 
     /**
      * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    */
+   public function update(Request $request, string $id)
     {
         $validated = $request->validate([
             'name' => 'required|max:255',
-            'content' => 'required',
+            'position' => 'required',
         ]);
 
-        $row = Activity::find($id);
+        $row = Structure::find($id);
         $row->name = $validated['name'];
-        $row->content = $validated['content'];
-        $row->uploaded_by = Auth::user()->name;
+        $row->position = $validated['position'];
         $row->save();
 
         return back()->with('success', 'Data has been updated');
@@ -89,11 +85,11 @@ class ActivityController extends Controller
 
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . $request->file('image')->extension();
-            $request->file('image')->storeAs('uploads/activities', $imageName); // Simpan di storage/app/public/uploads/activities
-            $imagePath = 'uploads/activities/' . $imageName; // Path yang disimpan di database
+            $request->file('image')->storeAs('uploads/structures', $imageName); // Simpan di storage/app/public/uploads/structures
+            $imagePath = 'uploads/structures/' . $imageName; // Path yang disimpan di database
         }
 
-        $row = Activity::find($id);
+        $row = Structure::find($id);
         $row->image = $imagePath;
         $row->save();
 
@@ -105,9 +101,9 @@ class ActivityController extends Controller
      */
     public function destroy(string $id)
     {
-        $row = Activity::find($id);
+        $row = Structure::find($id);
         $row->delete();
 
-        return redirect('/activities/list');
+        return redirect('/structures/list');
     }
 }
