@@ -6,8 +6,42 @@
         <h1 class="mb-4 text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Struktur Organisasi Mushola Alamin
         </h1>
         <div class="text-center">
-            <img class="w-400 rounded-xl" src="{{ asset('images/Struktur-MIJ-update-8-september-2025.png') }}" alt="struktur-dkm-alamin">
+            <div id="chart-container" class="w-full"></div>
         </div>
     </div>
 </section>
+
+<script>
+    var datascource = {
+  'id':'rootNode',// It's a optional property which will be used as id attribute of node
+  // and data-parent attribute, which contains the id of the parent node
+  'collapsed': true, // By default, the children nodes of current node is hidden.
+  'className': 'top-level', // It's a optional property which will be used as className attribute of node.
+  'nodeTitlePro':'Lao Lao',
+  'nodeContentPro':'general manager',
+  // you should use json datsource (local or remote) and set this property.
+  // This property implies that whether this node has parent node, siblings nodes or children nodes.
+  // relationshipValue is a string composed of three "0/1" identifier.
+  // First character stands for wether current node has parent node;
+  // Scond character stands for wether current node has siblings nodes;
+  // Third character stands for wether current node has children node.
+  'children': [// The property stands for nested nodes.
+    {'nodeTitlePro':'Bo Miao','nodeContentPro':'department manager','relationship':'110' },
+    {'nodeTitlePro':'Su Miao','nodeContentPro':'department manager','relationship':'111',
+      'children': [
+        {'nodeTitlePro':'Tie Hua','nodeContentPro':'senior engineer','relationship':'110' },
+        {'nodeTitlePro':'Hei Hei','nodeContentPro':'senior engineer','relationship':'110' }
+      ]
+    },
+    {'nodeTitlePro':'Yu Jie','nodeContentPro':'department manager','relationship':'110' }
+  ],
+};
+$('#chart-container').orgchart({
+  'data' : datascource,
+  'depth': 2,
+  'nodeTitle': 'name',
+  'nodeContent': 'title',
+  'zoom':true,
+});
+</script>
 @endsection
