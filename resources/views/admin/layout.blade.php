@@ -11,7 +11,7 @@
     <meta name="author" content="Husni dev">
 
     <title>Admin | Al-AMIN</title>
-
+    <link rel="shortcut icon" href="{{ asset('images/logo-alamin.svg') }}" type="image/x-icon">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
